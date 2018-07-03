@@ -1,0 +1,37 @@
+root: true
+
+plugins:
+    - "node"
+
+extends:
+    - "eslint"
+    - "plugin:node/recommended"
+
+rules:
+    space-before-function-paren:
+        - error
+        - anonymous: always
+          named: never
+    no-use-before-define: off
+    require-jsdoc: off
+    no-var: error
+    one-var:
+        - error
+        - never
+    func-style:
+        - error
+        - declaration
+        - allowArrowFunctions: true
+    quote-props:
+        - error
+        - consistent
+    no-undefined: off
+    no-multi-spaces:
+        - error
+        - exceptions: { VariableDeclarator: true }
+    curly:
+        - error
+        - multi-line
+    key-spacing:
+        - error
+        - mode: minimum
